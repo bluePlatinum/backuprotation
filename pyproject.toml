@@ -1,0 +1,12 @@
+[project]
+name = "backuprotation"
+version = "0.0.1"
+description = "A tool for rotating backups"
+authors = [
+    { name="bluePlatinum", email="jukic.rok@gmail.com" },
+]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.scripts]
+backuprotation = "backuprotation.main:main"
