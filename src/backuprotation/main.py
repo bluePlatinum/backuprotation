@@ -1,12 +1,12 @@
 import argparse
 import os
 import sys
-import datetime
 import logging
 
 from backuprotation import projectname
 
 logger = logging.getLogger(__name__)
+
 
 def parse_args(args):
     parser = argparse.ArgumentParser(
