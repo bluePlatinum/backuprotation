@@ -71,13 +71,11 @@ def rotate(discovered, number, dry_run):
 
     for element in scheduled:
         if os.path.isfile(element):
-            print(f"deleting file {element}")
             logger.info(f"deleting file {element}")
             if not dry_run:
                 os.remove(element)
 
         else:
-            print(f"deleting directory {element}")
             logger.info(f"deleting directory {element}")
             if not dry_run:
                 os.rmdir(element)
