@@ -10,3 +10,9 @@ dependencies = []
 
 [project.scripts]
 backuprotation = "backuprotation.main:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/bluePlatinum/backuprotation"
