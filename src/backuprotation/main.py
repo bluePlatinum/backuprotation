@@ -3,7 +3,7 @@ import os
 import sys
 import logging
 
-from backuprotation import projectname
+from backuprotation import PROJECTNAME, VERSION
 
 logger = logging.getLogger(__name__)
 
@@ -12,6 +12,7 @@ def parse_args(args):
     parser = argparse.ArgumentParser(
         prog="backuprotation",
         description="Rotates backups for you.",
+        epilog=f"{PROJECTNAME} {VERSION}"
     )
 
     parser.add_argument(
@@ -30,14 +31,14 @@ def parse_args(args):
     parser.add_argument(
         "-f", "--files",
         action="store_true",
-        help=f"If this option is selected {projectname} looks for files "
+        help=f"If this option is selected {PROJECTNAME} looks for files "
              f"instead of directories to rotate."
     )
 
     parser.add_argument(
         "-fd", "--files-and-directories",
         action="store_true",
-        help=f"If this option is selected {projectname} looks both for files "
+        help=f"If this option is selected {PROJECTNAME} looks both for files "
              f"and directories to rotate."
     )
 
