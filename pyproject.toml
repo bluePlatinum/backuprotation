@@ -6,6 +6,9 @@ authors = [
     { name="bluePlatinum", email="jukic.rok@gmail.com" },
 ]
 requires-python = ">=3.7"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE.txt"]
 dependencies = []
 
 [project.scripts]
