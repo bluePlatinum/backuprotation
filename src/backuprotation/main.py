@@ -2,6 +2,7 @@ import argparse
 import os
 import sys
 import logging
+import shutil
 
 from backuprotation import PROJECTNAME, VERSION
 
@@ -78,7 +79,7 @@ def rotate(discovered, number, dry_run):
         else:
             logger.info(f"deleting directory {element}")
             if not dry_run:
-                os.rmdir(element)
+                shutil.rmtree(element)
 
 
 def main():
