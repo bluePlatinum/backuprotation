@@ -23,8 +23,19 @@ def create_testing_dir():
         while os.path.exists(name):
             name = "".join(random.choices(string.ascii_lowercase, k=8))
 
-        os.makedirs(os.path.join(tmpdir.name, name))
+        dirpath = os.path.join(tmpdir.name, name)
+        os.makedirs(dirpath)
         dirs.append(name)
+
+        # fill directory with dirs and files
+        for _ in range(random.randint(0, 10)):
+            name = "".join(random.choices(string.ascii_lowercase, k=8))
+            while os.path.exists(name):
+                name = "".join(random.choices(string.ascii_lowercase, k=8))
+            if random.randint(0, 1):
+                os.makedirs(os.path.join(dirpath, name))
+            else:
+                open(os.path.join(dirpath, name), "w").close()
 
     for _ in range(filenum):
         name = "".join(random.choices(string.ascii_lowercase, k=8))
@@ -53,8 +64,19 @@ def create_timed_dir():
             name = "".join(random.choices(string.ascii_lowercase, k=8))
 
         time.sleep(0.1)
-        os.makedirs(os.path.join(tmpdir.name, name))
+        dirpath = os.path.join(tmpdir.name, name)
+        os.makedirs(dirpath)
         dirs.append(name)
+
+        # fill directory with dirs and files
+        for _ in range(random.randint(1, 10)):
+            name = "".join(random.choices(string.ascii_lowercase, k=8))
+            while os.path.exists(os.path.join(dirpath, name)):
+                name = "".join(random.choices(string.ascii_lowercase, k=8))
+            if random.randint(0, 1):
+                os.makedirs(os.path.join(dirpath, name))
+            else:
+                open(os.path.join(dirpath, name), "w").close()
 
     return tmpdir, dirs
 
