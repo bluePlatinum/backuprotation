@@ -1,9 +1,9 @@
 [project]
 name = "backuprotation"
-version = "0.0.2"
+version = "0.0.3"
 description = "A tool for rotating backups"
 authors = [
-    { name="bluePlatinum", email="jukic.rok@gmail.com" },
+    { name="meltingmodem", email="meltingmodem@gmail.com" },
 ]
 requires-python = ">=3.7"
 readme = "README.md"
@@ -18,4 +18,4 @@ backuprotation = "backuprotation.main:main"
 dev = ["pytest"]
 
 [project.urls]
-Homepage = "https://github.com/bluePlatinum/backuprotation"
+Homepage = "https://github.com/meltingmodem/backuprotation"
